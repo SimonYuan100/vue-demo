@@ -1,6 +1,9 @@
 # demo-vue
 
-> A Vue.js project
+> A Vue.js project insclued as below
+* [vue router](https://github.com/vuejs/vue-router)
+* [vue resource](https://github.com/pagekit/vue-resource)
+* [mint](https://github.com/ElemeFE/mint-ui)
 
 ## Build Setup
 
