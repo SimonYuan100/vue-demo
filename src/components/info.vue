@@ -1,19 +1,17 @@
 <template>
-  <div class="hello">
+  <div class="info">
     <img src="../assets/logo.png" alt="">
-    <h1>{{ msg }}</h1>
-    <h2>Vue-demo</h2>
-  	<router-link :to="{ path: '/info', query: { openid: openid}}">信息填写页面</router-link>
+    <h3 v-text="title"></h3>
+    <input type="text" placeholder="请输入姓名">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'info',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      openid: '666666666'
+      title: '信息填写页面'
     };
   }
 };
