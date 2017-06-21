@@ -2,7 +2,8 @@
   <div class="info">
     <img src="../assets/logo.png" alt="">
     <h3 v-text="title"></h3>
-    <input type="text" placeholder="请输入姓名">
+    <input type="text" placeholder="请输入姓名" v-model="userName">
+    <div :class="{isShow: isShow}" @click="going()">{{submit}}</div>
   </div>
 </template>
 
@@ -11,8 +12,26 @@ export default {
   name: 'info',
   data () {
     return {
-      title: '信息填写页面'
+      title: '信息填写页面',
+      submit: 'submit',
+      isShow: true,
+      userName: ''
     };
+  },
+  created () {
+    // doSomething
+  },
+  methods: {
+    going () {
+      let param = {name: this.userName};
+      this.$http.get('/someAddress', {params: param}).then(response => {
+        console.log(response.data); // 成功调取的数据
+      },
+        response => {
+          console.log('调取接口失败');
+        });
+      // this.$http.post('/someAddress', param).then(response => {}, response => {})
+    }
   }
 };
 </script>
@@ -35,5 +54,8 @@ li {
 
 a {
   color: #42b983;
+}
+.isShow{
+  display: block
 }
 </style>

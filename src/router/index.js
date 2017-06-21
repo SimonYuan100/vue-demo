@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Hello from '@/components/Hello';
 import info from '@/components/info';
+import payment from '@/components/payment';
 
 Vue.use(Router);
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/info',
       name: 'info',
       component: info
+    },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: payment
     }
   ]
 });
