@@ -1,9 +1,10 @@
 # demo-vue
 
 > A Vue.js project inclued as below
+* [vue-cli] 脚手架，自动搭建项目环境
 * [vue router](https://github.com/vuejs/vue-router)
 * [vue resource](https://github.com/pagekit/vue-resource)
-* [mint](https://github.com/ElemeFE/mint-ui)
+* [mint](https://github.com/ElemeFE/mint-ui) UI库
 
 ## Build Setup
 
