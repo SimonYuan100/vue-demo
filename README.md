@@ -1,4 +1,4 @@
-# demo-vue
+## demo-vue
 
 > A Vue.js project inclued as below
 * [vue-cli](https://github.com/vuejs/vue-cli) 脚手架，自动搭建项目环境, 本项目基于此构建
@@ -31,15 +31,15 @@ npm run build
 > 等效于在命令框中输入： node build/build
 > 如果想了解运行详细机制，这个文件可顺藤摸瓜
 
-# 路由配置 见router 下index.js
+### 路由配置 见router 下index.js
 > url 配参方式：
 * <router-link :to="{ path: '/info', query: { openid: openid}}">信息填写页面</router-link>
 * 任意标签 绑定点击事件 方法内 this.$router.push('/info?openid=' + openid) 或者 this.$router.push({path: '/info', query: {openid: openid}})
 
-# 利用resource数据交互 注意get请求格式 及 post请求格式，响应数据结构
+### 利用resource数据交互 注意get请求格式 及 post请求格式，响应数据结构
 > 参考info.vue line25 两种请求的配参数格式  get要求额外包成{params: param} param是参数结构。
 > 响应数据的一级字段data 才是结果
 
-# main.js 全局配置
+### main.js 全局配置
 
 # .eslintrc.js esLint 静态代码检测的规则文件
