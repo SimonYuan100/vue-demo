@@ -9,6 +9,7 @@
     <p>支付信息2:{{payI2}}</p>
     <p @click='showPrice'>showPrice</p>
     <p v-if='isShow'>{{totalPrice}}</p>
+    <p><span @click.self='eventFn'>this is a test about 修饰符 of event</span></p>
   </div>
 </template>
 
@@ -50,6 +51,9 @@ export default {
   methods: {
     showPrice () {
       this.isShow = !this.isShow;
+    },
+    eventFn () {
+      alert('事件修饰符--prevent、stop、capture、self');
     }
   }
 };
