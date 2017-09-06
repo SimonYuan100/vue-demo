@@ -9,10 +9,15 @@
     <p>支付信息2:{{payI2}}</p>
     <p @click='showPrice'>showPrice</p>
     <p v-if='isShow'>{{totalPrice}}</p>
+    <select v-model='sel' multiple="">
+      <option v-for='subPay in payFArray' :value='subPay.val'>{{subPay.name}}</option>
+    </select>
+    <p>你选择的支付方式是： {{sel}}</p>
   </div>
 </template>
 
 <script>
+import payFArray from '../source/payFArray';
 export default {
   name: 'payment',
   data () {
@@ -21,7 +26,9 @@ export default {
       payF: '微信',
       payA: 5000,
       money: 665,
-      isShow: false
+      isShow: false,
+      payFArray: payFArray,
+      sel: []
     };
   },
   created () {
