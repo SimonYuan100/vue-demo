@@ -13,6 +13,7 @@
       <option v-for='subPay in payFArray' :value='subPay.val'>{{subPay.name}}</option>
     </select>
     <p>你选择的支付方式是： {{sel}}</p>
+    <p><span @click.self='eventFn'>this is a test about 修饰符 of event</span></p>
   </div>
 </template>
 
@@ -57,6 +58,9 @@ export default {
   methods: {
     showPrice () {
       this.isShow = !this.isShow;
+    },
+    eventFn () {
+      alert('事件修饰符--prevent、stop、capture、self');
     }
   }
 };

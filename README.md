@@ -43,3 +43,11 @@ npm run build
 ### main.js 全局配置
 
 ### .eslintrc.js esLint 静态代码检测的规则文件
+
+### 组件
+```
+Vue.component('com-ele', fn | obj);
+
+fn: Vue.extend(obj)
+obj: {template: '<div>this is a com-ele</div>'}
+```

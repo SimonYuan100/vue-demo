@@ -3,7 +3,8 @@
     <img src="../assets/logo.png" alt="">
     <h1>{{ msg }}</h1>
     <h2>Vue-demo</h2>
-  	<router-link :to="{ path: '/info', query: { openid: openid}}">信息填写页面</router-link>
+    <router-link :to="{ path: '/info', query: { openid: openid}}">信息填写页面</router-link>
+  	<router-link :to="{ path: '/dom', query: { openid: openid}}">dom页面</router-link>
     <a @click="goInfo()">支付页面</a>
   </div>
 </template>

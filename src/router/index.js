@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Hello from '@/components/Hello';
 import info from '@/components/info';
 import payment from '@/components/payment';
+import dom from '@/components/dom';
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/payment',
       name: 'payment',
       component: payment
+    },
+    {
+      path: '/dom',
+      name: 'dom',
+      component: dom
     }
   ]
 });
