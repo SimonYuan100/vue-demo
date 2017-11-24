@@ -4,6 +4,12 @@ import Hello from '@/components/Hello';
 import info from '@/components/info';
 import payment from '@/components/payment';
 import dom from '@/components/dom';
+import index from '@/components/index';
+// var evn = 'test';
+var evn = 'testLoacl';
+var preFixed = '';
+
+if (evn === 'test') preFixed = '/test';
 
 Vue.use(Router);
 
@@ -12,22 +18,27 @@ export default new Router({
   base: __dirname,
   routes: [
     {
-      path: '/',
+      path: preFixed + '/',
+      name: 'index',
+      component: index
+    },
+    {
+      path: preFixed + '/hello',
       name: 'Hello',
       component: Hello
     },
     {
-      path: '/info',
+      path: preFixed + '/info',
       name: 'info',
       component: info
     },
     {
-      path: '/payment',
+      path: preFixed + '/payment',
       name: 'payment',
       component: payment
     },
     {
-      path: '/dom',
+      path: preFixed + '/dom',
       name: 'dom',
       component: dom
     }

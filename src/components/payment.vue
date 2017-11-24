@@ -38,6 +38,11 @@ export default {
     this.payI2 = {payF: '支付宝', payA: 523};
   // }
   },
+   beforeRouteLeave: function (to, from, next) {
+    alert(JSON.stringify(to));
+    window.history.go(-1);
+    // next();
+  },
   computed: {
     payI1 () {
       return this.payF + this.payA;

@@ -5,6 +5,7 @@ import App from './App';
 import router from './router';
 import VueResource from 'vue-resource';
 import vueENV from './envconfig';
+import store from './store';
 
 Vue.config.productionTip = false;
 
@@ -18,6 +19,7 @@ Vue.use(VueResource);
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 });
