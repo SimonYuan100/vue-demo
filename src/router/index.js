@@ -5,8 +5,9 @@ import info from '@/components/info';
 import payment from '@/components/payment';
 import dom from '@/components/dom';
 import index from '@/components/index';
-// var evn = 'test';
-var evn = 'testLoacl';
+import parent from '@/components/parent';
+var evn = 'test';
+// var evn = 'testLoacl';
 var preFixed = '';
 
 if (evn === 'test') preFixed = '/test';
@@ -41,6 +42,11 @@ export default new Router({
       path: preFixed + '/dom',
       name: 'dom',
       component: dom
+    },
+    {
+      path: preFixed + '/parent',
+      name: 'parent',
+      component: parent
     }
   ]
 });

@@ -9,10 +9,14 @@
     <div>{{num}}</div>
     <div>{{num2}}</div>
     <div @click='add'>add num</div>
+    <div>{{drop}}</div>
+    <div @click='reduce'>bus</div>
+    <com-el :id-seleted='num'></com-el>
   </div>
 </template>
 
 <script>
+import bus from '../source/bus.js';
 export default {
   name: 'hello',
   data () {
@@ -22,8 +26,24 @@ export default {
       openid: '666666666',
       orderid: '88888888',
       showImg: true,
-      num2: this.$store.state.age
+      num2: this.$store.state.age,
+      drop: 55
     };
+  },
+  components: {
+    'com-el': {
+      template: '<div>{{num3}}</div>',
+      data () {
+        return {
+          num3: 555
+        };
+      },
+      created () {
+        bus.$on('id-seleted', (err) => {
+          console.log(err);
+        });
+      }
+    }
   },
   beforeCreate: function () {
     console.group('beforeCreate 创建前状态===============》');
@@ -95,6 +115,10 @@ export default {
     },
     add () {
       this.$store.commit('plus');
+    },
+    reduce () {
+      bus.$emit('id-selected', 1);
+      console.log('id-selected');
     }
   },
   computed: {
